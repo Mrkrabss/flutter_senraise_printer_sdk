@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
                 .buffer
                 .asUint8List();
             await _senraisePrinterPlugin.printPic(data);
-            await _senraisePrinterPlugin.printText("Printing test\n");
+            await _senraisePrinterPlugin.printText("\n");
           },child: Text("click")),
         ),
       ),
