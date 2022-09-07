@@ -1,7 +1,7 @@
 name: senraise_printer
 description: senraise printer sdk
 version: 0.0.1
-
+homepage: https://github.com/Mrkrabss/flutter_senraise_printer_sdk
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
