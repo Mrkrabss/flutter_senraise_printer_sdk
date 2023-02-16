@@ -52,7 +52,7 @@ abstract class SenraisePrinterPlatform extends PlatformInterface {
     throw UnimplementedError('setAlignment() has not been implemented.');
   }
 
-  Future<Void?> setTextSize(Float textSize) {
+  Future<Void?> setTextSize(double textSize) {
     throw UnimplementedError('setTextSize() has not been implemented.');
   }
 
@@ -60,7 +60,7 @@ abstract class SenraisePrinterPlatform extends PlatformInterface {
     throw UnimplementedError('nextLine() has not been implemented.');
   }
 
-  Future<Void?> setTextBold(Bool bold) {
+  Future<Void?> setTextBold(bool bold) {
     throw UnimplementedError('setTextBold() has not been implemented.');
   }
 
@@ -68,15 +68,15 @@ abstract class SenraisePrinterPlatform extends PlatformInterface {
     throw UnimplementedError('setDark() has not been implemented.');
   }
 
-  Future<Void?> setLineHeight(Float lineHeight) {
+  Future<Void?> setLineHeight(double lineHeight) {
     throw UnimplementedError('setLineHeight() has not been implemented.');
   }
 
-  Future<Void?> setTextDoubleWidth(Bool enable) {
+  Future<Void?> setTextDoubleWidth(bool enable) {
     throw UnimplementedError('setTextDoubleWidth() has not been implemented.');
   }
 
-  Future<Void?> setTextDoubleHeight(Bool enable) {
+  Future<Void?> setTextDoubleHeight(bool enable) {
     throw UnimplementedError('setTextDoubleWidth() has not been implemented.');
   }
 

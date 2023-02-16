@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -37,7 +39,8 @@ class _MyAppState extends State<MyApp> {
                 .asUint8List();
             await _senraisePrinterPlugin.printPic(data);
             await _senraisePrinterPlugin.printText("\n");
-          },child: Text("click")),
+            await _senraisePrinterPlugin.setTextBold(true);
+          },child: Text("clickkkkk")),
         ),
       ),
     );

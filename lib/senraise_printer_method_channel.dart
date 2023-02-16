@@ -43,7 +43,7 @@ class MethodChannelSenraisePrinter extends SenraisePrinterPlatform {
     await methodChannel.invokeMethod<String>('setAlignment',{"alignment":alignment});
   }
   @override
-  Future<Void?> setTextSize(Float textSize) async{
+  Future<Void?> setTextSize(double textSize) async{
     await methodChannel.invokeMethod<String>('setTextSize',{"textSize":textSize});
   }
   @override
@@ -51,7 +51,7 @@ class MethodChannelSenraisePrinter extends SenraisePrinterPlatform {
     await methodChannel.invokeMethod<String>('nextLine',{"line":line});
   }
   @override
-  Future<Void?> setTextBold(Bool bold) async{
+  Future<Void?> setTextBold(bool bold) async{
     await methodChannel.invokeMethod<String>('setTextBold',{"bold":bold});
   }
   @override
@@ -59,15 +59,15 @@ class MethodChannelSenraisePrinter extends SenraisePrinterPlatform {
     await methodChannel.invokeMethod<String>('setDark',{"value":value});
   }
   @override
-  Future<Void?> setLineHeight(Float lineHeight) async{
+  Future<Void?> setLineHeight(double lineHeight) async{
     await methodChannel.invokeMethod<String>('setLineHeight',{"lineHeight":lineHeight});
   }
   @override
-  Future<Void?> setTextDoubleWidth(Bool enable) async{
+  Future<Void?> setTextDoubleWidth(bool enable) async{
     await methodChannel.invokeMethod<String>('setTextDoubleWidth',{"enable":enable});
   }
   @override
-  Future<Void?> setTextDoubleHeight(Bool enable) async{
+  Future<Void?> setTextDoubleHeight(bool enable) async{
     await methodChannel.invokeMethod<String>('setTextDoubleHeight',{"enable":enable});
   }
   @override
