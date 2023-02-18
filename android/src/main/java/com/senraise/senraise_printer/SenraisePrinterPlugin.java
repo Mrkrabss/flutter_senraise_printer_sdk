@@ -82,19 +82,19 @@ public class SenraisePrinterPlugin implements FlutterPlugin, MethodCallHandler {
                 printerInterface.setAlignment(call.argument("alignment"));
                 result.success("setAlignment success");
             } else if (call.method.equals("setTextSize")) {
-                printerInterface.setTextSize(call.argument("textSize"));
+                printerInterface.setTextSize(((Double)call.argument("textSize")).floatValue());
                 result.success("setTextSize success");
             } else if (call.method.equals("nextLine")) {
                 printerInterface.nextLine(call.argument("line"));
                 result.success("nextLine success");
             } else if (call.method.equals("setTextBold")) {
-                printerInterface.setTextBold(call.argument("bold"));
+                printerInterface.setTextBold(Boolean.TRUE.equals(call.argument("bold")));
                 result.success("setTextBold success");
             }else if (call.method.equals("setDark")) {
                 printerInterface.setDark(call.argument("value"));
                 result.success("setDark success");
             }else if (call.method.equals("setLineHeight")) {
-                printerInterface.setLineHeight(call.argument("lineHeight"));
+                printerInterface.setLineHeight(call.argument(((Double)call.argument("lineHeight")).floatValue()));
                 result.success("setLineHeight success");
             }else if (call.method.equals("setTextDoubleWidth")) {
                 printerInterface.setTextDoubleWidth(Boolean.TRUE.equals(call.argument("enable")));
@@ -109,7 +109,7 @@ public class SenraisePrinterPlugin implements FlutterPlugin, MethodCallHandler {
                 result.notImplemented();
             }
         } catch (Exception e) {
-            Log.e("ghghgh",e.getMessage());
+            Log.e("ghghghuuuu",e.getMessage());
         }
     }
 
