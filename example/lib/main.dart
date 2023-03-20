@@ -34,12 +34,13 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: TextButton(onPressed: () async {
-            Uint8List data = (await rootBundle.load('images/test.png'))
-                .buffer
-                .asUint8List();
-            await _senraisePrinterPlugin.printPic(data);
-            await _senraisePrinterPlugin.printText("\n");
+            // Uint8List data = (await rootBundle.load('images/test.png'))
+            //     .buffer
+            //     .asUint8List();
+            // await _senraisePrinterPlugin.printPic(data);
             await _senraisePrinterPlugin.setTextBold(true);
+            await _senraisePrinterPlugin.setTextSize(96);
+            await _senraisePrinterPlugin.printText("123\n");
           },child: Text("clickkkkk")),
         ),
       ),

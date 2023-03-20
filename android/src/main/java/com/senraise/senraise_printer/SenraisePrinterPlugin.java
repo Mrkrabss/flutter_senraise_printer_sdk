@@ -94,7 +94,7 @@ public class SenraisePrinterPlugin implements FlutterPlugin, MethodCallHandler {
                 printerInterface.setDark(call.argument("value"));
                 result.success("setDark success");
             }else if (call.method.equals("setLineHeight")) {
-                printerInterface.setLineHeight(call.argument(((Double)call.argument("lineHeight")).floatValue()));
+                printerInterface.setLineHeight(((Double)call.argument("lineHeight")).floatValue());
                 result.success("setLineHeight success");
             }else if (call.method.equals("setTextDoubleWidth")) {
                 printerInterface.setTextDoubleWidth(Boolean.TRUE.equals(call.argument("enable")));
