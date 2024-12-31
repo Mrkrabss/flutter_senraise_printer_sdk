@@ -1,9 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:senraise_printer/senraise_printer.dart';
 
 void main() {
@@ -33,15 +29,17 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: TextButton(onPressed: () async {
-            // Uint8List data = (await rootBundle.load('images/test.png'))
-            //     .buffer
-            //     .asUint8List();
-            // await _senraisePrinterPlugin.printPic(data);
-            await _senraisePrinterPlugin.setTextBold(true);
-            await _senraisePrinterPlugin.setTextSize(96);
-            await _senraisePrinterPlugin.printText("123\n");
-          },child: Text("clickkkkk")),
+          child: TextButton(
+              onPressed: () async {
+                // Uint8List data = (await rootBundle.load('images/test.png'))
+                //     .buffer
+                //     .asUint8List();
+                // await _senraisePrinterPlugin.printPic(data);
+                await _senraisePrinterPlugin.setTextBold(true);
+                await _senraisePrinterPlugin.setTextSize(96);
+                await _senraisePrinterPlugin.printText("123\n");
+              },
+              child: const Text("clickkkkk")),
         ),
       ),
     );

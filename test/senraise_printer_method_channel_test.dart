@@ -8,17 +8,11 @@ void main() {
 
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
-    });
-  });
+  setUp(() {});
 
-  tearDown(() {
-    channel.setMockMethodCallHandler(null);
-  });
+  testWidgets('getPlatformVersion', (WidgetTester tester) async {
+    tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(channel, (MethodCall methodCall) async => '42');
 
-  test('getPlatformVersion', () async {
-    expect(await platform.getPlatformVersion(), '42');
+    expect(await platform.getServiceVersion(), '42');
   });
 }
